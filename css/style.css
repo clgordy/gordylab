@@ -252,6 +252,13 @@ section.alt { background: var(--paper-soft); }
   color: var(--red-dark);
 }
 
+.publication-highlight {
+  grid-column: 1 / -1;
+  border-top: 4px solid var(--red);
+}
+.publication-highlight .tag { margin-bottom: 0.7rem; }
+.publication-highlight h3 { font-size: 1.35rem; }
+
 .stat-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
