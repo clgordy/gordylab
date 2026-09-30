@@ -162,6 +162,10 @@ img { max-width: 100%; display: block; }
   color: #fff;
 }
 .btn-ghost:hover { background: #fff; color: var(--red-dark); text-decoration: none; }
+.lab-hub-actions .btn-primary { background: var(--red); border-color: var(--red); color: #fff; }
+.lab-hub-actions .btn-primary:hover { background: var(--red-dark); border-color: var(--red-dark); }
+.lab-hub-actions .btn-ghost { color: var(--red-dark); border-color: var(--red); }
+.lab-hub-actions .btn-ghost:hover { background: var(--red); color: #fff; }
 
 /* subpage hero (smaller) */
 .page-hero {
