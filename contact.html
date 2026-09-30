@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Claire L. Gordy, Ph.D.</title>
+<meta name="description" content="Contact Claire L. Gordy, Ph.D. — Associate Professor, Department of Biological Sciences, NC State University.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="index.html" class="brand">Gordy<span>Lab</span></a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="people.html">People</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <h1>Contact</h1>
+    <p>
+      Interested in collaborating, joining the lab, or learning more about the research
+      program? Reach out below.
+    </p>
+  </div>
+</section>
+
+<section>
+  <div class="container contact-grid">
+
+    <div>
+      <h2 class="section-title">Get in Touch</h2>
+
+      <div class="contact-item">
+        <div class="contact-icon">&#9993;</div>
+        <div>
+          <strong>Email</strong><br>
+          <a href="mailto:clgordy@ncsu.edu">clgordy@ncsu.edu</a>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <div class="contact-icon">&#127979;</div>
+        <div>
+          <strong>Department</strong><br>
+          Department of Biological Sciences<br>
+          North Carolina State University<br>
+          Raleigh, NC
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <div class="contact-icon">&#128101;</div>
+        <div>
+          <strong>Prospective Students</strong><br>
+          Undergraduate and graduate students interested in biology education research,
+          CURE development, or belonging/equity research in STEM are encouraged to reach
+          out by email. See the <a href="people.html">People</a> page for current
+          mentorship areas.
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <h2 class="section-title">Send a Message</h2>
+      <p class="form-note">This form opens your email client with a pre-filled message — no data is collected or stored by this site.</p>
+      <form class="contact-form" id="contact-form">
+        <div>
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+          <label for="email">Your Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <strong>Claire L. Gordy, Ph.D.</strong><br>
+      Department of Biological Sciences<br>
+      North Carolina State University
+    </div>
+    <div>
+      <a href="mailto:clgordy@ncsu.edu">clgordy@ncsu.edu</a>
+    </div>
+    <div>
+      <a href="cv.html">CV</a> &middot;
+      <a href="research.html">Research</a> &middot;
+      <a href="people.html">People</a> &middot;
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+  document.getElementById("contact-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+    const name = encodeURIComponent(document.getElementById("name").value);
+    const email = document.getElementById("email").value;
+    const message = encodeURIComponent(document.getElementById("message").value);
+    const subject = encodeURIComponent("Website inquiry from " + document.getElementById("name").value);
+    const body = encodeURIComponent(
+      "Name: " + document.getElementById("name").value +
+      "\nEmail: " + email +
+      "\n\n" + document.getElementById("message").value
+    );
+    window.location.href = "mailto:clgordy@ncsu.edu?subject=" + subject + "&body=" + body;
+  });
+</script>
+</body>
+</html>
